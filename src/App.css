@@ -6,13 +6,6 @@
   min-height: 100%;
 }
 
-/* Media query to adjust animation for smaller screens */
-@media (max-width: 768px) {
-  .animate-typing {
-    max-width: 90%; /* Ensure text fits on mobile */
-  }
-}
-
 .card {
   padding: 2em;
 }
@@ -22,34 +15,9 @@
   to { opacity: 1; }
 }
 
-@keyframes typing {
-  from { 
-    width: 0;
-    border-right: 3px solid #2563eb;
-  }
-  to { 
-    width: 25.64ch; /* Keep the fixed character count */
-    border-right: 3px solid #2563eb;
-  }
-}
-
-@keyframes blink {
-  from, to { border-color: transparent }
-  50% { border-color: #2563eb; }
-}
-
 @layer utilities {
   .animate-fade-in {
     animation: fadeIn 1s ease-in forwards;
-  }
-  
-  .animate-typing {
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block; /* Added to maintain cursor position */
-    border-right: 3px solid #2563eb; /* Persistent cursor */
-    animation: typing 3s steps(35, end) forwards,
-              blink 0.75s step-end infinite;
   }
 }
 

@@ -45,7 +45,7 @@ const responsive = {
 
 const Projects: React.FC = () => {
   return (
-    <section className="relative z-10 px-6 py-24">
+    <section className="relative z-10 px-6 pb-24">
       <div className=" text-white">
         <h2 className="text-4xl font-semibold text-gray-800 dark:text-white mb-4">My Projects</h2>
         <Carousel responsive={responsive} infinite autoPlay autoPlaySpeed={3000}>

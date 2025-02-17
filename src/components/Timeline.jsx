@@ -1,6 +1,7 @@
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { FaBriefcase } from "react-icons/fa";
+import { motion } from 'framer-motion';
 const experiences = [
   {
     title: "Full-Stack Associate Application Engineer",
@@ -30,21 +31,15 @@ const experiences = [
     description:
       "Trained and selected the final membership of the 2022 and 2023 All-American Marching Band.",
   },
-  {
-    title: "Farmhand",
-    company: "Rinkenberger Farms",
-    date: "Summers 2016 - 2021",
-    description:
-      "Worked with other farmhands to maintain farm operations and equipment.",
-  },
 ];
 
 function Timeline() { 
   return (
-    <section className="relative z-10 px-6 py-24 "> 
+    <section className="relative z-10 px-6 py-20 "> 
       <h2 className="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-white">
         Work Experience
       </h2>
+
       <VerticalTimeline lineColor="#3B82F6"> {/* Added lineColor prop */}
         {experiences.map((exp, index) => (
           <VerticalTimelineElement
