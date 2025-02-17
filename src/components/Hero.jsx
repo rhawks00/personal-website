@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 function HeroSection() {
   return (
     <section className="relative flex flex-col overflow-hidden min-h-screen">
-      <div className="flex flex-col md:flex-row items-center md:items-start justify-between px-12 mb-8 pt-10">
+      <div className="flex flex-col md:flex-row items-center md:items-start justify-between px-12 pt-10"> {/* Reduced mb-8 to mb-4 */}
         <div className="flex-grow text-center md:text-left">
           <div className="flex items-baseline justify-center md:justify-start">
             <span className="text-8xl font-bold text-gray-800 dark:text-white animate-fade-in opacity-0">
@@ -33,15 +33,15 @@ function HeroSection() {
       >
         <img
           src="/images/IMG_6857.jpg"
-          className="w-96 h-96 md:w-112 md:h-112 xl:w-156 xl:h-156 rounded-full shadow-lg object-cover"
+          className="w-[40vh] h-[40vh] md:w-[40vh] md:h-[40vh] xl:w-[50vh] xl:h-[50vh] rounded-full shadow-lg object-cover" // Increased size for mobile
         />
-        <h1 className="text-5xl font-bold text-gray-800 dark:text-white mt-6">Ryan Hawks</h1>
+        <h1 className="text-5xl font-bold text-gray-800 dark:text-white mt-4">Ryan Hawks</h1> {/* Reduced mt-6 to mt-4 */}
         <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">Software Engineer | Chicago, IL</p>
         <a
           href="/documents/Hawks_Resume_2_13_25.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-6 px-8 py-4 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 mb-10"
+          className="inline-block mt-6 px-8 py-4 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 mb-2"
         >
           View Resume
         </a>
