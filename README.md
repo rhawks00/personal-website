@@ -1,8 +1,15 @@
-# React + Vite
+# Ryan Hawks - Personal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies Used
+- **React**: For building the front-end.
+- **Vite**: For fast and efficient builds.
+- **Tailwind CSS**: For utility-first CSS styling.
+- **Node.js**: For development server.
+- **tsParticles**: For cool background.
 
-Currently, two official plugins are available:
+## Features
+- Section about me, with some personal photos
+- Timeline of my work history
+- A portfolio section to showcase my projects
+- Links to my professional profiles (LinkedIn, GitHub)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
