@@ -61,8 +61,8 @@ const Projects: React.FC = () => {
                   src={project.image} 
                   alt={project.title} 
                   className="w-full h-auto max-h-64 object-contain rounded-lg" 
-                  whileHover={{ scale: 1.8 }} // Scale up on hover to match project tile size
-                  transition={{ type: "spring", stiffness: 100 }} // Smooth transition
+                  whileHover={{ scale: 1.8 }} 
+                  transition={{ type: "spring", stiffness: 100 }} 
                 />
               </div>
               {project.link && (

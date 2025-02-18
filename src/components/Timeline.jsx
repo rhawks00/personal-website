@@ -25,7 +25,7 @@ const experiences = [
       "Implemented test suites for Billpay APIs and presented learnings on Spring Boot and Postman.",
   },
   {
-    title: "Purdue 'All-American' Marching Band Section Leader",
+    title: 'Purdue "All-American" Marching Band Section Leader',
     company: "Purdue University",
     date: "January 2022 - May 2023",
     description:
@@ -40,7 +40,7 @@ function Timeline() {
         Work Experience
       </h2>
 
-      <VerticalTimeline lineColor="#3B82F6"> {/* Added lineColor prop */}
+      <VerticalTimeline lineColor="#3B82F6">
         {experiences.map((exp, index) => (
           <VerticalTimelineElement
             key={index}
@@ -48,10 +48,10 @@ function Timeline() {
             contentStyle={{ background: "#1E293B", color: "#fff" }}
             contentArrowStyle={{ borderRight: "7px solid #1E293B" }}
             date={exp.date}
-            dateClassName="text-gray-800 dark:text-gray-300" // Added date styling
+            dateClassName="text-gray-800 dark:text-gray-300" 
             iconStyle={{ background: "#3B82F6", color: "#fff" }}
             icon={<FaBriefcase />}
-            visible={true} // Force visibility
+            visible={true} 
           >
             <h3 className="text-2xl font-semibold">{exp.title}</h3>
             <h4 className="text-lg font-medium">{exp.company}</h4>

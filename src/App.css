@@ -6,10 +6,6 @@
   min-height: 100%;
 }
 
-.card {
-  padding: 2em;
-}
-
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -21,11 +17,14 @@
   }
 }
 
-/* Dark background for body to make particles visible */
 body {
   margin: 0;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #121212; /* Dark background for contrast */
+  background-color: #121212;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
 }
