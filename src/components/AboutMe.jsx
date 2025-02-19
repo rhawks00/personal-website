@@ -16,7 +16,7 @@ function AboutMe() {
       <div className="container mx-auto px-4 bg-[#1E293B] rounded-lg p-6">
         <div className="flex flex-col md:flex-row items-center py-12">
           <div className="w-full md:w-1/2 px-6 order-1 md:order-2 bg-[#1E293B] rounded-lg p-6">
-            <h2 className="text-4xl font-semibold text-white mb-4 text-center">About Me</h2>
+            <h2 className="text-4xl font-semibold text-white mb-4 text-left">About Me</h2>
             <p className="text-xl text-gray-300 mb-4 z-10 text-left">
               I'm Ryan Hawks, a software engineer based in Chicago, IL, working at Discover Financial Services as a full-stack Application Engineer.
             </p>
