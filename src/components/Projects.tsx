@@ -13,7 +13,7 @@ type ProjectProps = {
 const projects: ProjectProps[] = [
   {
     title: "VirtuCards",
-    description: "Built during COVID-19, this was a virtual card game designed to be played on your mobile phone with a desktop game to act as a common screen between players. This was built using Unity, Photon, and Google Firebase.",
+    description: "Developed during COVID-19, this virtual card game lets players use their mobile phones while a shared desktop game acts as a common screen. Built with Unity, Photon, and Google Firebase.",
     image: "/images/VirtuCards.jpg",
     link: "https://github.com/VirtuCard/Virtucard",
   },
@@ -25,13 +25,13 @@ const projects: ProjectProps[] = [
   },
   {
     title: "Wordle for Terminal",
-    description: "A Wordle clone built so it can be played in your terminal. Created as an exercise to learn Python.",
+    description: "A terminal-based Wordle clone built in Python as a learning project.",
     image: "/images/Wordle.jpg",
     link: "https://github.com/rhawks00/WordleforTerminal",
   },
   {
     title: "Personal Website!",
-    description: "Built to be a 'flashier' introduction to myself and to showcase some of my web development skills. This was built using React, Tailwind CSS, TSParticles, React-Multi-Carousel, React-Bootstrap, and more fun libraries.",
+    description: "A polished, interactive introduction to my work and skills. Built with React, Tailwind CSS, TSParticles, React-Multi-Carousel, React-Bootstrap, and more.",
     image: "/images/website.jpg",
     link: "https://github.com/rhawks00/personal-website",
   },
@@ -54,14 +54,14 @@ const Projects: React.FC = () => {
             <div key={index} className="h-[600px] flex flex-col p-6 bg-gray-800 rounded-lg shadow-lg m-4">
               <div className="flex-1 p-6">
                 <h3 className="text-2xl font-bold">{project.title}</h3>
-                <p className="mt-4 text-lg line-clamp-4">{project.description}</p>
+                <p className="mt-4 text-lg line-clamp-6">{project.description}</p>
               </div>
               <div className="p-6 flex justify-center">
                 <motion.img 
                   src={project.image} 
                   alt={project.title} 
                   className="w-full h-auto max-h-64 object-contain rounded-lg" 
-                  whileHover={{ scale: 1.8 }} 
+                  whileHover={{ scale: 1.5 }} 
                   transition={{ type: "spring", stiffness: 100 }} 
                 />
               </div>
