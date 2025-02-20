@@ -1,7 +1,6 @@
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { FaBriefcase } from "react-icons/fa";
-import { motion } from 'framer-motion';
 const experiences = [
   {
     title: "Full-Stack Associate Application Engineer",
