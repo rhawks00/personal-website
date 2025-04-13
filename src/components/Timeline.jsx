@@ -3,9 +3,16 @@ import "react-vertical-timeline-component/style.min.css";
 import { FaBriefcase } from "react-icons/fa";
 const experiences = [
   {
+    title: "Full-Stack Senior-Associate Application Engineer",
+    company: "Discover Finaical Services",
+    date: "April 2025 - Present",
+    description:
+        'Integrated AI into redesigned UI for card call center software.'
+  },
+  {
     title: "Full-Stack Associate Application Engineer",
     company: "Discover Financial Services",
-    date: "Aug 2024 - Present",
+    date: "Aug 2024 - March 2025",
     description:
       "Led development of internal CRUD application, improved Agile ceremonies, and enhanced Discover's Disclosure Playback API.",
   },
