@@ -46,12 +46,12 @@ const responsive = {
 
 const Projects: React.FC = () => {
   return (
-    <section className="relative z-10 px-6 pb-24">
+    <section className="relative z-10 px-6 pb-24 max-w-screen-xl mx-auto">
       <div className="text-white">
         <h2 className="text-4xl font-semibold text-gray-800 dark:text-white mb-4">My Projects</h2>
-        <Carousel responsive={responsive} infinite autoPlay autoPlaySpeed={3000}>
+        <Carousel responsive={responsive} infinite>
           {projects.map((project, index) => (
-            <div key={index} className="h-[600px] flex flex-col p-6 bg-gray-800 rounded-lg shadow-lg m-4">
+            <div key={index} className="h-[600px] flex flex-col p-6 bg-gray-800 rounded-lg shadow-lg m-4 max-w-full">
               <div className="flex-1 p-6">
                 <h3 className="text-2xl font-bold">{project.title}</h3>
                 <p className="mt-4 text-lg line-clamp-6">{project.description}</p>
