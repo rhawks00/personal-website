@@ -38,7 +38,7 @@ function HeroSection() {
         <h1 className="text-5xl font-bold text-gray-800 dark:text-white mt-4">Ryan Hawks</h1>
         <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">Software Engineer | Chicago, IL</p>
         <a
-          href="/documents/Hawks_Resume_2_18_25.pdf"
+          href="/documents/Hawks_Resume_1_22_2026.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block mt-6 px-8 py-4 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 mb-2"
