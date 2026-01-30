@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { motion } from 'framer-motion'; // Importing framer-motion for hover effect
+import { motion } from 'framer-motion';
 
 type ProjectProps = {
   title: string;
