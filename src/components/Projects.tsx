@@ -35,6 +35,12 @@ const projects: ProjectProps[] = [
     image: "/images/website.jpg",
     link: "https://github.com/rhawks00/personal-website",
   },
+  {
+    title: "The Holis7ics",
+    description: "Band website for The Holis7ics featuring show listings, music, and social links. Built with React.",
+    image: "/images/Holis7icsThumbnail.jpg",
+    link: "https://theholis7ics.com/",
+  },
 ];
 
 const responsive = {
