@@ -45,43 +45,63 @@ const projects: ProjectProps[] = [
     description: "Band website for The Holis7ics featuring show listings, music, and social links.",
     image: "/images/Holis7icsThumbnail.jpg",
     link: "https://theholis7ics.com/",
-    tags: ["React"],
+    tags: ["React", "TypeScript", "Google Calendar API", "Google OAuth"],
   },
 ];
 
 const responsive = {
-  superLargeDesktop: { breakpoint: { max: 4000, min: 2000 }, items: 3 },
-  desktop: { breakpoint: { max: 2000, min: 768 }, items: 2 },
+  ultrawide: { breakpoint: { max: 4000, min: 3000 }, items: 5 },
+  superLargeDesktop: { breakpoint: { max: 3000, min: 2000 }, items: 4 },
+  desktop: { breakpoint: { max: 2000, min: 1200 }, items: 3 },
+  smallDesktop: { breakpoint: { max: 1200, min: 768 }, items: 2 },
   tablet: { breakpoint: { max: 768, min: 464 }, items: 1 },
   mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
 };
 
+const CarouselArrow = ({ direction, onClick, carouselState }: any) => {
+  if (carouselState && projects.length <= carouselState.slidesToShow) {
+    return null;
+  }
+  const isLeft = direction === "left";
+  return (
+    <button
+      onClick={onClick}
+      className={`react-multiple-carousel__arrow ${isLeft ? "react-multiple-carousel__arrow--left" : "react-multiple-carousel__arrow--right"}`}
+    />
+  );
+};
+
 const Projects: React.FC = () => {
   return (
-    <section className="relative z-10 px-6 pb-24 max-w-screen-xl mx-auto">
+    <section className="relative z-10 px-6 pb-24">
       <div className="text-white">
         <h2 className="text-4xl font-semibold text-gray-800 dark:text-white mb-4">My Projects</h2>
-        <Carousel responsive={responsive} infinite>
+        <Carousel
+          responsive={responsive}
+          infinite
+          customLeftArrow={<CarouselArrow direction="left" />}
+          customRightArrow={<CarouselArrow direction="right" />}
+        >
           {projects.map((project, index) => (
-            <div key={index} className="h-[600px] flex flex-col p-6 bg-gray-800 rounded-lg shadow-lg m-4 max-w-full">
-              <div className="flex-1 p-6">
-                <h3 className="text-2xl font-bold">{project.title}</h3>
-                <div className="flex flex-wrap gap-2 mt-3">
+            <div key={index} className="h-[450px] flex flex-col p-4 bg-gray-800 rounded-lg shadow-lg m-4 max-w-full">
+              <div className="flex-1 p-4">
+                <h3 className="text-xl font-bold">{project.title}</h3>
+                <div className="flex flex-wrap gap-1.5 mt-2">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="px-2 py-1 text-xs font-medium bg-blue-600/20 text-blue-300 rounded-full border border-blue-500/30">
+                    <span key={tag} className="px-2 py-0.5 text-xs font-medium bg-blue-600/20 text-blue-300 rounded-full border border-blue-500/30">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <p className="mt-3 text-lg line-clamp-5">{project.description}</p>
+                <p className="mt-2 text-sm line-clamp-4">{project.description}</p>
               </div>
-              <div className="p-6 flex justify-center">
+              <div className="p-4 flex justify-center overflow-hidden">
                 <motion.img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-auto max-h-64 object-contain rounded-lg"
-                  whileHover={{ scale: 1.5 }}
-                  transition={{ type: "spring", stiffness: 100 }}
+                  className="w-full h-auto max-h-48 object-contain rounded-lg"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 200 }}
                 />
               </div>
               {project.link && (
@@ -90,7 +110,7 @@ const Projects: React.FC = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-6 inline-block text-blue-400 hover:underline text-lg"
+                    className="mt-2 inline-block text-blue-400 hover:underline text-base"
                   >
                     View Project →
                   </a>
