@@ -14,7 +14,6 @@ function App() {
       <Timeline/>
       <Projects/>
       <Footer/>
-      <Background />
     </>
   )
 }
