@@ -8,38 +8,44 @@ type ProjectProps = {
   description: string;
   image: string;
   link?: string;
+  tags: string[];
 };
 
 const projects: ProjectProps[] = [
   {
     title: "VirtuCards",
-    description: "Developed during COVID-19, this virtual card game lets players use their mobile phones while a shared desktop game acts as a common screen. Built with Unity, Photon, and Google Firebase.",
+    description: "Developed during COVID-19, this virtual card game lets players use their mobile phones while a shared desktop game acts as a common screen.",
     image: "/images/VirtuCards.jpg",
     link: "https://github.com/VirtuCard/Virtucard",
+    tags: ["Unity", "C#", "Photon", "Firebase"],
   },
   {
     title: "GQL",
-    description: "SQL database server with version control, backend written using Rust and frontend written using React. Implemented SQL operations, B-trees for indexing, and version control commands.",
+    description: "SQL database server with version control. Implemented SQL operations, B-trees for indexing, and version control commands.",
     image: "/images/GQL.jpg",
     link: "https://github.com/GQL-Project/gql_db",
+    tags: ["Rust", "React", "SQL"],
   },
   {
     title: "Wordle for Terminal",
-    description: "A terminal-based Wordle clone built in Python as a learning project.",
+    description: "A terminal-based Wordle clone built as a learning project.",
     image: "/images/Wordle.jpg",
     link: "https://github.com/rhawks00/WordleforTerminal",
+    tags: ["Python"],
   },
   {
     title: "Personal Website!",
-    description: "A polished, interactive introduction to my work and skills. Built with React, Tailwind CSS, TSParticles, React-Multi-Carousel, React-Bootstrap, and more.",
+    description: "A polished, interactive introduction to my work and skills.",
     image: "/images/website.jpg",
     link: "https://github.com/rhawks00/personal-website",
+    tags: ["React", "Tailwind CSS", "TypeScript", "TSParticles"],
   },
   {
     title: "The Holis7ics",
-    description: "Band website for The Holis7ics featuring show listings, music, and social links. Built with React.",
+    description: "Band website for The Holis7ics featuring show listings, music, and social links.",
     image: "/images/Holis7icsThumbnail.jpg",
     link: "https://theholis7ics.com/",
+    tags: ["React"],
   },
 ];
 
@@ -60,15 +66,22 @@ const Projects: React.FC = () => {
             <div key={index} className="h-[600px] flex flex-col p-6 bg-gray-800 rounded-lg shadow-lg m-4 max-w-full">
               <div className="flex-1 p-6">
                 <h3 className="text-2xl font-bold">{project.title}</h3>
-                <p className="mt-4 text-lg line-clamp-6">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="px-2 py-1 text-xs font-medium bg-blue-600/20 text-blue-300 rounded-full border border-blue-500/30">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <p className="mt-3 text-lg line-clamp-5">{project.description}</p>
               </div>
               <div className="p-6 flex justify-center">
-                <motion.img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-auto max-h-64 object-contain rounded-lg" 
-                  whileHover={{ scale: 1.5 }} 
-                  transition={{ type: "spring", stiffness: 100 }} 
+                <motion.img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-auto max-h-64 object-contain rounded-lg"
+                  whileHover={{ scale: 1.5 }}
+                  transition={{ type: "spring", stiffness: 100 }}
                 />
               </div>
               {project.link && (

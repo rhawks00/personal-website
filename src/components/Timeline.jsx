@@ -4,7 +4,7 @@ import { FaBriefcase } from "react-icons/fa";
 const experiences = [
   {
     title: "Full-Stack Senior-Associate Application Engineer",
-    company: "Discover Finaical Services",
+    company: "Discover Financial Services",
     date: "April 2025 - Present",
     description:
         'Integrated AI into redesigned UI for card call center software.'

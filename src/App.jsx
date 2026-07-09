@@ -1,19 +1,24 @@
+import { lazy, Suspense } from 'react'
 import './App.css'
 import HeroSection from './components/Hero'
-import AboutMe from './components/AboutMe'
-import Timeline from './components/Timeline'
 import Background from './components/Background'
-import Projects from './components/Projects'
-import Footer from './components/Footer'
+
+const AboutMe = lazy(() => import('./components/AboutMe'))
+const Timeline = lazy(() => import('./components/Timeline'))
+const Projects = lazy(() => import('./components/Projects'))
+const Footer = lazy(() => import('./components/Footer'))
+
 function App() {
   return (
     <>
       <Background/>
       <HeroSection/>
-      <AboutMe/>
-      <Timeline/>
-      <Projects/>
-      <Footer/>
+      <Suspense>
+        <AboutMe/>
+        <Timeline/>
+        <Projects/>
+        <Footer/>
+      </Suspense>
     </>
   )
 }
