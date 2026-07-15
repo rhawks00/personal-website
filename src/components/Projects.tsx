@@ -27,11 +27,11 @@ const projects: ProjectProps[] = [
     tags: ["Rust", "React", "SQL"],
   },
   {
-    title: "Wordle for Terminal",
-    description: "A terminal-based Wordle clone built as a learning project.",
-    image: "/images/Wordle.jpg",
-    link: "https://github.com/rhawks00/WordleforTerminal",
-    tags: ["Python"],
+    title: "ParkStats",
+    description: "Track your MLB ballpark visits with detailed game logs, spray charts, pitching stats, and leaderboards.",
+    image: "/images/ParkStats.jpg",
+    link: "https://myparkstats.com/",
+    tags: ["React", "TypeScript", "Supabase", "MLB API"],
   },
   {
     title: "Personal Website!",
