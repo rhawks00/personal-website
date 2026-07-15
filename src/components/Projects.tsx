@@ -33,6 +33,7 @@ const projects: ProjectProps[] = [
     link: "https://myparkstats.com/",
     tags: ["React", "TypeScript", "Supabase", "MLB API"],
   },
+  /*
   {
     title: "Personal Website!",
     description: "A polished, interactive introduction to my work and skills.",
@@ -40,6 +41,7 @@ const projects: ProjectProps[] = [
     link: "https://github.com/rhawks00/personal-website",
     tags: ["React", "Tailwind CSS", "TypeScript", "TSParticles"],
   },
+  */
   {
     title: "The Holis7ics",
     description: "Band website for The Holis7ics featuring show listings, music, and social links.",

@@ -18,7 +18,7 @@ function AboutMe() {
           <div className="w-full md:w-1/2 px-6 order-1 md:order-2 bg-[#1E293B] rounded-lg p-6">
             <h2 className="text-4xl font-semibold text-white mb-4 text-left">About Me</h2>
             <p className="text-xl text-gray-300 mb-4 z-10 text-left">
-              I'm Ryan Hawks, a software engineer based in Chicago, IL, working at Discover Financial Services as a full-stack Application Engineer.
+              I'm Ryan Hawks, a software engineer based in Chicago, IL, working at Capital One as a full-stack Application Engineer.
             </p>
             <p className="text-xl text-gray-300 mb-4 text-left">
             I have experience with Java, JavaScript, React, Spring, and Node, among other technologies. I'm passionate about continuous learning and always looking for opportunities to grow.
